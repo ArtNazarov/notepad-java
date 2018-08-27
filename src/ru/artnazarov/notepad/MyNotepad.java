@@ -17,9 +17,11 @@ public class MyNotepad {
 		JMenuItem newFile = new JMenuItem("New file");
 		JMenuItem openFile = new JMenuItem("Open file...");
 		JMenuItem saveFile = new JMenuItem("Save file...");
+		JMenuItem openFromUrl = new JMenuItem("Open from URL...");
 		
 		file.add(newFile);
 		file.add(openFile);
+		file.add(openFromUrl);
 		file.add(saveFile);
 		
 		menu.add(file);
@@ -37,6 +39,7 @@ public class MyNotepad {
 		newFile.addActionListener(new OnFileNew(this));
 		saveFile.addActionListener(new OnFileSave(this));
 		openFile.addActionListener(new OnFileOpen(this));
+		openFromUrl.addActionListener(new OnURLOpen(this));
 	}
 
 	public static void main(String[] args) {
